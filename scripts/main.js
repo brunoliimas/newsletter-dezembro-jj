@@ -24,6 +24,21 @@ function initializeTabs() {
 // Inicializa os event listeners quando o documento estiver carregado
 document.addEventListener('DOMContentLoaded', initializeTabs);
 
+var swiper = new Swiper(".preventFocus", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     freeMode: true,
