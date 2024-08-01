@@ -32,7 +32,36 @@ var swiper = new Swiper(".preventFocus", {
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-      },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+
+
+var swiper = new Swiper(".cqEnabling", {
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
+
+
+var swiper = new Swiper(".customerFocus", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -51,41 +80,61 @@ var swiper2 = new Swiper(".mySwiper2", {
     },
 });
 
+var brasilMeeting = new Swiper(".brasilMeeting", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var brasilMeeting2 = new Swiper(".brasilMeeting2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: brasilMeeting,
+    },
+});
 
-// Function to hide all graphs
-function hideAllGraphs() {
-    document.querySelectorAll('[id^="data-grafico"]').forEach(graph => {
-        graph.classList.add('hidden');
-    });
+var regionalMeeting = new Swiper(".regionalMeeting", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var regionalMeeting2 = new Swiper(".regionalMeeting2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: regionalMeeting,
+    },
+});
+function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentId) {
+    document.getElementById(activeContentId).classList.remove('hidden');
+    document.getElementById(inactiveContentId).classList.add('hidden');
+
+    const activeTab = document.getElementById(activeTabId);
+    const inactiveTab = document.getElementById(inactiveTabId);
+
+    activeTab.classList.add('bg-red-500', 'text-white');
+    activeTab.classList.remove('bg-white', 'text-red-500', 'border-2', 'border-red-500');
+    activeTab.querySelector('span').classList.add('text-red-500', 'bg-white');
+    activeTab.querySelector('span').classList.remove('text-white', 'bg-red-500');
+
+    inactiveTab.classList.add('bg-white', 'text-red-500', 'border-2', 'border-red-500');
+    inactiveTab.classList.remove('bg-red-500', 'text-white');
+    inactiveTab.querySelector('span').classList.add('text-white', 'bg-red-500');
+    inactiveTab.querySelector('span').classList.remove('text-red-500', 'bg-white');
 }
 
-// Function to show the selected graph
-function showGraph(graphId) {
-    document.getElementById(graphId).classList.remove('hidden');
-}
-
-// Adding event listeners to each tab
-document.getElementById('tab-grafico-01').addEventListener('click', () => {
-    hideAllGraphs();
-    showGraph('data-grafico-01');
+document.getElementById('brasilMeetingTab').addEventListener('click', function () {
+    toggleTab('brasilMeetingTab', 'regionalMeetingTab', 'brasilMeetingCntt', 'regionalMeetingCntt');
 });
 
-document.getElementById('tab-grafico-02').addEventListener('click', () => {
-    hideAllGraphs();
-    showGraph('data-grafico-02');
+document.getElementById('regionalMeetingTab').addEventListener('click', function () {
+    toggleTab('regionalMeetingTab', 'brasilMeetingTab', 'regionalMeetingCntt', 'brasilMeetingCntt');
 });
 
-document.getElementById('tab-grafico-03').addEventListener('click', () => {
-    hideAllGraphs();
-    showGraph('data-grafico-03');
+document.getElementById('brasilLearn2Tab').addEventListener('click', function () {
+    console.log("Clicou");
 });
 
-document.getElementById('tab-grafico-04').addEventListener('click', () => {
-    hideAllGraphs();
-    showGraph('data-grafico-04');
-});
 
-// Show the first graph by default
-document.addEventListener('DOMContentLoaded', () => {
-    showGraph('data-grafico-01');
-});
+// Set the initial active tab
+// document.getElementById('brasilLearn1Tab').click();

@@ -1,0 +1,11 @@
+.brasilMeeting .swiper-slide,
+.regionalMeeting .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.brasilMeeting .swiper-slide-thumb-active ,
+.regionalMeeting .swiper-slide-thumb-active {
+    opacity: 1;
+}
