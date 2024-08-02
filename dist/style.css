@@ -1,3 +1,49 @@
+@font-face {
+    font-family: JJ-Display;
+    src: url(../assets/fonts/JohnsonDisplay-Regular.otf)format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: JJ-Display;
+    src: url(../assets/fonts/JohnsonDisplay-Medium.otf)format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: JJ-Text;
+    src: url(../assets/fonts/JohnsonText-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: JJ-Text;
+    src: url(../assets/fonts/JohnsonText-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: JJ-Display, sans-serif;
+    font-weight: 500;
+}
+
+p,
+span,
+a,
+b {
+    font-family: JJ-Text, sans-serif;
+}
+span{
+    font-weight: 500;
+}
+
 .brasilMeeting .swiper-slide,
 .regionalMeeting .swiper-slide {
     width: 25%;
@@ -5,7 +51,7 @@
     opacity: 0.6;
 }
 
-.brasilMeeting .swiper-slide-thumb-active ,
+.brasilMeeting .swiper-slide-thumb-active,
 .regionalMeeting .swiper-slide-thumb-active {
     opacity: 1;
 }

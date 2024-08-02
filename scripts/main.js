@@ -112,14 +112,16 @@ function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentI
     const activeTab = document.getElementById(activeTabId);
     const inactiveTab = document.getElementById(inactiveTabId);
 
+    // Atualiza as classes da aba ativa
     activeTab.classList.add('bg-red-500', 'text-white');
-    activeTab.classList.remove('bg-white', 'text-red-500', 'border-2', 'border-red-500');
+    activeTab.classList.remove('bg-white', 'text-black', 'border-2', 'border-black');
     activeTab.querySelector('span').classList.add('text-red-500', 'bg-white');
-    activeTab.querySelector('span').classList.remove('text-white', 'bg-red-500');
+    activeTab.querySelector('span').classList.remove('text-white', 'bg-black');
 
-    inactiveTab.classList.add('bg-white', 'text-red-500', 'border-2', 'border-red-500');
+    // Atualiza as classes da aba inativa
+    inactiveTab.classList.add('bg-white', 'text-black', 'border-2', 'border-black');
     inactiveTab.classList.remove('bg-red-500', 'text-white');
-    inactiveTab.querySelector('span').classList.add('text-white', 'bg-red-500');
+    inactiveTab.querySelector('span').classList.add('text-white', 'bg-black');
     inactiveTab.querySelector('span').classList.remove('text-red-500', 'bg-white');
 }
 
