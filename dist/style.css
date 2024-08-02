@@ -37,7 +37,9 @@ h6 {
 p,
 span,
 a,
-b {
+b,
+ul,
+ol {
     font-family: JJ-Text, sans-serif;
 }
 span{

@@ -105,9 +105,11 @@ var regionalMeeting2 = new Swiper(".regionalMeeting2", {
         swiper: regionalMeeting,
     },
 });
-function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentId) {
+function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentId, activeTabsId, inactiveTabsId) {
     document.getElementById(activeContentId).classList.remove('hidden');
     document.getElementById(inactiveContentId).classList.add('hidden');
+    document.getElementById(activeTabsId).classList.remove('hidden');
+    document.getElementById(inactiveTabsId).classList.add('hidden');
 
     const activeTab = document.getElementById(activeTabId);
     const inactiveTab = document.getElementById(inactiveTabId);
@@ -126,17 +128,82 @@ function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentI
 }
 
 document.getElementById('brasilMeetingTab').addEventListener('click', function () {
-    toggleTab('brasilMeetingTab', 'regionalMeetingTab', 'brasilMeetingCntt', 'regionalMeetingCntt');
+    toggleTab('brasilMeetingTab', 'regionalMeetingTab', 'brasilMeetingCntt', 'regionalMeetingCntt', 'brasilMeetingTabs', 'regionalMeetingTabs');
 });
 
 document.getElementById('regionalMeetingTab').addEventListener('click', function () {
-    toggleTab('regionalMeetingTab', 'brasilMeetingTab', 'regionalMeetingCntt', 'brasilMeetingCntt');
-});
-
-document.getElementById('brasilLearn2Tab').addEventListener('click', function () {
-    console.log("Clicou");
+    toggleTab('regionalMeetingTab', 'brasilMeetingTab', 'regionalMeetingCntt', 'brasilMeetingCntt', 'regionalMeetingTabs', 'brasilMeetingTabs');
 });
 
 
-// Set the initial active tab
-// document.getElementById('brasilLearn1Tab').click();
+function brasilToggleTab(activeContentId, inactiveContentIdA, inactiveContentIdB, activeTabId, inactiveTabIdA, inactiveTabIdB) {
+    document.getElementById(activeContentId).classList.remove('hidden');
+    document.getElementById(activeContentId).classList.add('flex');
+    document.getElementById(inactiveContentIdA).classList.add('hidden');
+    document.getElementById(inactiveContentIdA).classList.remove('flex');
+    document.getElementById(inactiveContentIdB).classList.add('hidden');
+    document.getElementById(inactiveContentIdB).classList.remove('flex');
+
+    // Toggle tab styles
+    document.getElementById(activeTabId).classList.add('bg-sky-700', 'text-white');
+    document.getElementById(activeTabId).classList.remove('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
+    document.getElementById(inactiveTabIdA).classList.remove('bg-sky-700', 'text-white');
+    document.getElementById(inactiveTabIdA).classList.add('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
+    document.getElementById(inactiveTabIdB).classList.remove('bg-sky-700', 'text-white');
+    document.getElementById(inactiveTabIdB).classList.add('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
+}
+
+document.getElementById('cqBrasilTab').addEventListener('click', function () {
+    brasilToggleTab('cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoCntt', 'cqBrasilTab', 'visitaChuckTab', 'qualificacaoTab');
+});
+
+document.getElementById('visitaChuckTab').addEventListener('click', function () {
+    brasilToggleTab('visitaChuckCntt', 'cqBrasilCntt', 'qualificacaoCntt', 'visitaChuckTab', 'cqBrasilTab', 'qualificacaoTab');
+});
+
+document.getElementById('qualificacaoTab').addEventListener('click', function () {
+    brasilToggleTab('qualificacaoCntt', 'cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoTab', 'cqBrasilTab', 'visitaChuckTab');
+});
+
+function regionalToggleTab(activeContentId, inactiveContentId, activeTabId, inactiveTabId) {
+    document.getElementById(activeContentId).classList.remove('hidden');
+    document.getElementById(activeContentId).classList.add('flex');
+    document.getElementById(inactiveContentId).classList.add('hidden');
+    document.getElementById(inactiveContentId).classList.remove('flex');
+
+    // Toggle tab styles
+    document.getElementById(activeTabId).classList.add('bg-sky-700', 'text-white');
+    document.getElementById(activeTabId).classList.remove('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
+    document.getElementById(inactiveTabId).classList.remove('bg-sky-700', 'text-white');
+    document.getElementById(inactiveTabId).classList.add('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
+
+}
+document.getElementById('cqRegionalTab').addEventListener('click', function () {
+    regionalToggleTab('cqRegionalCntt', 'meetingActivitiesCntt', 'cqRegionalTab', 'meetingActivitiesTab');
+});
+document.getElementById('meetingActivitiesTab').addEventListener('click', function () {
+    regionalToggleTab('meetingActivitiesCntt', 'cqRegionalCntt', 'meetingActivitiesTab', 'cqRegionalTab');
+});
+
+function customerToggleTab(activeContentId, inactiveContentId, activeTabId, inactiveTabId) {
+    document.getElementById(activeContentId).classList.remove('hidden');
+    document.getElementById(activeContentId).classList.add('flex');
+    document.getElementById(inactiveContentId).classList.add('hidden');
+    document.getElementById(inactiveContentId).classList.remove('flex');
+    // Atualiza os estilos das abas
+    const activeTab = document.getElementById(activeTabId);
+    const inactiveTab = document.getElementById(inactiveTabId);
+
+    activeTab.classList.add('bg-green-600', 'text-white');
+    activeTab.classList.remove('bg-white', 'text-green-600', 'border-2', 'border-green-600');
+
+    inactiveTab.classList.remove('bg-green-600', 'text-white');
+    inactiveTab.classList.add('bg-white', 'text-green-600', 'border-2', 'border-green-600');
+}
+
+document.getElementById('brasilTab').addEventListener('click', function () {
+    customerToggleTab('brasilCntt', 'clusterCntt', 'brasilTab', 'clusterTab');
+});
+document.getElementById('clusterTab').addEventListener('click', function () {
+    customerToggleTab('clusterCntt', 'brasilCntt', 'clusterTab', 'brasilTab');
+});
