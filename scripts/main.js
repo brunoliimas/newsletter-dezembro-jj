@@ -34,16 +34,18 @@ var swiper = new Swiper(".preventFocus", {
         disableOnInteraction: false,
     },
     pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
+        el: ".swiper-pagination"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
 
 var swiper = new Swiper(".cqEnabling", {
     pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
+        el: ".swiper-pagination"
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -63,8 +65,11 @@ var swiper = new Swiper(".customerFocus", {
         disableOnInteraction: false,
     },
     pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
+        el: ".swiper-pagination"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 

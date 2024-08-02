@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: JJ-Display;
     src: url(../assets/fonts/JohnsonDisplay-Medium.otf)format('opentype');
@@ -17,6 +18,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: JJ-Text;
     src: url(../assets/fonts/JohnsonText-Medium.otf);
@@ -42,7 +44,8 @@ ul,
 ol {
     font-family: JJ-Text, sans-serif;
 }
-span{
+
+span {
     font-weight: 500;
 }
 
@@ -56,4 +59,70 @@ span{
 .brasilMeeting .swiper-slide-thumb-active,
 .regionalMeeting .swiper-slide-thumb-active {
     opacity: 1;
+}
+
+.cqEnabling .swiper-button-next,
+.cqEnabling .swiper-button-prev {
+    background-color: #8C3BBB;
+}
+
+.customerFocus .swiper-button-next,
+.customerFocus .swiper-button-prev {
+    background-color: #FF5524;
+    top: 96%;
+}
+.preventFocus .swiper-button-next,
+.preventFocus .swiper-button-prev {
+    background-color: #D91700;
+    top: 90%;
+}
+.customerFocus .swiper-button-next {
+    left: 55%;
+}
+.customerFocus .swiper-button-prev {
+    left: 40%;
+}
+.preventFocus .swiper-button-next {
+    left: 55%;
+}
+.preventFocus .swiper-button-prev {
+    left: 40%;
+}
+
+
+.cqEnabling .swiper-button-next,
+.cqEnabling .swiper-button-prev,
+.preventFocus .swiper-button-prev,
+.preventFocus .swiper-button-next,
+.customerFocus .swiper-button-next,
+.customerFocus .swiper-button-prev {
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: .5rem;
+}
+
+.cqEnabling .swiper-button-next::after,
+.cqEnabling .swiper-button-prev::after,
+.preventFocus .swiper-button-prev::after,
+.preventFocus .swiper-button-next::after,
+.customerFocus .swiper-button-next::after,
+.customerFocus .swiper-button-prev::after {
+    font-size: 2rem;
+}
+
+.cqEnabling .swiper-pagination-bullet-active {
+    background-color: #8C3BBB;
+    width: 1rem;
+    height: 1rem;
+}
+.customerFocus .swiper-pagination-bullet-active {
+    background-color: #FF5524;
+    width: 1rem;
+    height: 1rem;
+}
+.preventFocus .swiper-pagination-bullet-active {
+    background-color: #D91700;
+    width: 1rem;
+    height: 1rem;
 }
