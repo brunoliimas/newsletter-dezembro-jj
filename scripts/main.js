@@ -54,10 +54,48 @@ var swiper = new Swiper(".cqEnabling", {
     loop: true,
 });
 
+var swiper = new Swiper(".swiperBrasil", {
+    pagination: {
+        el: ".swiper-pagination"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
+var swiper = new Swiper(".swiperRegional", {
+    pagination: {
+        el: ".swiper-pagination"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
+
 
 var swiper = new Swiper(".customerFocus", {
     slidesPerView: "auto",
     centeredSlides: true,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+var swiper = new Swiper(".simplicity", {
+    slidesPerView: "auto",
+    // centeredSlides: true,
     spaceBetween: 10,
     loop: true,
     autoplay: {
@@ -79,6 +117,32 @@ var swiper = new Swiper(".mySwiper", {
     watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper,
+    },
+});
+
+
+var swiper = new Swiper(".brasilFeira2", {
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".brasilFeira", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper,
+    },
+});
+
+
+var swiper = new Swiper(".regionalFeira2", {
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".regionalFeira", {
     spaceBetween: 10,
     thumbs: {
         swiper: swiper,
@@ -132,13 +196,13 @@ function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentI
     inactiveTab.querySelector('span').classList.remove('text-red-500', 'bg-white');
 }
 
-document.getElementById('brasilMeetingTab').addEventListener('click', function () {
-    toggleTab('brasilMeetingTab', 'regionalMeetingTab', 'brasilMeetingCntt', 'regionalMeetingCntt', 'brasilMeetingTabs', 'regionalMeetingTabs');
-});
+// document.getElementById('brasilMeetingTab').addEventListener('click', function () {
+//     toggleTab('brasilMeetingTab', 'regionalMeetingTab', 'brasilMeetingCntt', 'regionalMeetingCntt', 'brasilMeetingTabs', 'regionalMeetingTabs');
+// });
 
-document.getElementById('regionalMeetingTab').addEventListener('click', function () {
-    toggleTab('regionalMeetingTab', 'brasilMeetingTab', 'regionalMeetingCntt', 'brasilMeetingCntt', 'regionalMeetingTabs', 'brasilMeetingTabs');
-});
+// document.getElementById('regionalMeetingTab').addEventListener('click', function () {
+//     toggleTab('regionalMeetingTab', 'brasilMeetingTab', 'regionalMeetingCntt', 'brasilMeetingCntt', 'regionalMeetingTabs', 'brasilMeetingTabs');
+// });
 
 
 function brasilToggleTab(activeContentId, inactiveContentIdA, inactiveContentIdB, activeTabId, inactiveTabIdA, inactiveTabIdB) {
@@ -158,17 +222,17 @@ function brasilToggleTab(activeContentId, inactiveContentIdA, inactiveContentIdB
     document.getElementById(inactiveTabIdB).classList.add('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
 }
 
-document.getElementById('cqBrasilTab').addEventListener('click', function () {
-    brasilToggleTab('cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoCntt', 'cqBrasilTab', 'visitaChuckTab', 'qualificacaoTab');
-});
+// document.getElementById('cqBrasilTab').addEventListener('click', function () {
+//     brasilToggleTab('cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoCntt', 'cqBrasilTab', 'visitaChuckTab', 'qualificacaoTab');
+// });
 
-document.getElementById('visitaChuckTab').addEventListener('click', function () {
-    brasilToggleTab('visitaChuckCntt', 'cqBrasilCntt', 'qualificacaoCntt', 'visitaChuckTab', 'cqBrasilTab', 'qualificacaoTab');
-});
+// document.getElementById('visitaChuckTab').addEventListener('click', function () {
+//     brasilToggleTab('visitaChuckCntt', 'cqBrasilCntt', 'qualificacaoCntt', 'visitaChuckTab', 'cqBrasilTab', 'qualificacaoTab');
+// });
 
-document.getElementById('qualificacaoTab').addEventListener('click', function () {
-    brasilToggleTab('qualificacaoCntt', 'cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoTab', 'cqBrasilTab', 'visitaChuckTab');
-});
+// document.getElementById('qualificacaoTab').addEventListener('click', function () {
+//     brasilToggleTab('qualificacaoCntt', 'cqBrasilCntt', 'visitaChuckCntt', 'qualificacaoTab', 'cqBrasilTab', 'visitaChuckTab');
+// });
 
 function regionalToggleTab(activeContentId, inactiveContentId, activeTabId, inactiveTabId) {
     document.getElementById(activeContentId).classList.remove('hidden');
@@ -183,12 +247,12 @@ function regionalToggleTab(activeContentId, inactiveContentId, activeTabId, inac
     document.getElementById(inactiveTabId).classList.add('bg-white', 'text-sky-700', 'border-2', 'border-sky-700');
 
 }
-document.getElementById('cqRegionalTab').addEventListener('click', function () {
-    regionalToggleTab('cqRegionalCntt', 'meetingActivitiesCntt', 'cqRegionalTab', 'meetingActivitiesTab');
-});
-document.getElementById('meetingActivitiesTab').addEventListener('click', function () {
-    regionalToggleTab('meetingActivitiesCntt', 'cqRegionalCntt', 'meetingActivitiesTab', 'cqRegionalTab');
-});
+// document.getElementById('cqRegionalTab').addEventListener('click', function () {
+//     regionalToggleTab('cqRegionalCntt', 'meetingActivitiesCntt', 'cqRegionalTab', 'meetingActivitiesTab');
+// });
+// document.getElementById('meetingActivitiesTab').addEventListener('click', function () {
+//     regionalToggleTab('meetingActivitiesCntt', 'cqRegionalCntt', 'meetingActivitiesTab', 'cqRegionalTab');
+// });
 
 function customerToggleTab(activeContentId, inactiveContentId, activeTabId, inactiveTabId) {
     document.getElementById(activeContentId).classList.remove('hidden');
@@ -199,11 +263,11 @@ function customerToggleTab(activeContentId, inactiveContentId, activeTabId, inac
     const activeTab = document.getElementById(activeTabId);
     const inactiveTab = document.getElementById(inactiveTabId);
 
-    activeTab.classList.add('bg-green-600', 'text-white');
-    activeTab.classList.remove('bg-white', 'text-green-600', 'border-2', 'border-green-600');
+    activeTab.classList.add('bg-red-500', 'text-white');
+    activeTab.classList.remove('bg-white', 'text-red-500', 'border-2', 'border-red-500');
 
-    inactiveTab.classList.remove('bg-green-600', 'text-white');
-    inactiveTab.classList.add('bg-white', 'text-green-600', 'border-2', 'border-green-600');
+    inactiveTab.classList.remove('bg-red-500', 'text-white');
+    inactiveTab.classList.add('bg-white', 'text-red-500', 'border-2', 'border-red-500');
 }
 
 document.getElementById('brasilTab').addEventListener('click', function () {

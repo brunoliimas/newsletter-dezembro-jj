@@ -61,26 +61,25 @@ span {
     opacity: 1;
 }
 
+.swiperBrasil .swiper-button-next,
+.swiperBrasil .swiper-button-prev {
+    background-color: #0F68B2;
+}
 .cqEnabling .swiper-button-next,
 .cqEnabling .swiper-button-prev {
     background-color: #8C3BBB;
 }
 
 .customerFocus .swiper-button-next,
-.customerFocus .swiper-button-prev {
-    background-color: #FF5524;
-    top: 96%;
+.customerFocus .swiper-button-prev,
+.simplicity .swiper-button-next,
+.simplicity .swiper-button-prev {
+    background-color: #D91700;
 }
 .preventFocus .swiper-button-next,
 .preventFocus .swiper-button-prev {
     background-color: #D91700;
     top: 90%;
-}
-.customerFocus .swiper-button-next {
-    left: 55%;
-}
-.customerFocus .swiper-button-prev {
-    left: 40%;
 }
 .preventFocus .swiper-button-next {
     left: 55%;
@@ -92,10 +91,14 @@ span {
 
 .cqEnabling .swiper-button-next,
 .cqEnabling .swiper-button-prev,
+.swiperBrasil .swiper-button-next,
+.swiperBrasil .swiper-button-prev,
 .preventFocus .swiper-button-prev,
 .preventFocus .swiper-button-next,
 .customerFocus .swiper-button-next,
-.customerFocus .swiper-button-prev {
+.customerFocus .swiper-button-prev,
+.simplicity .swiper-button-next,
+.simplicity .swiper-button-prev {
     padding: 1.5rem;
     border-radius: 50%;
     color: #ffffff;
@@ -104,20 +107,34 @@ span {
 
 .cqEnabling .swiper-button-next::after,
 .cqEnabling .swiper-button-prev::after,
+.swiperBrasil .swiper-button-next::after,
+.swiperBrasil .swiper-button-prev::after,
 .preventFocus .swiper-button-prev::after,
 .preventFocus .swiper-button-next::after,
 .customerFocus .swiper-button-next::after,
-.customerFocus .swiper-button-prev::after {
-    font-size: 2rem;
+.customerFocus .swiper-button-prev::after,
+.simplicity .swiper-button-next::after,
+.simplicity .swiper-button-prev::after {
+    font-size: 1.5rem;
 }
 
 .cqEnabling .swiper-pagination-bullet-active {
-    background-color: #8C3BBB;
+    background-color: #D91700;
+    width: 1rem;
+    height: 1rem;
+}
+.swiperBrasil .swiper-pagination-bullet-active {
+    background-color: #D91700;
     width: 1rem;
     height: 1rem;
 }
 .customerFocus .swiper-pagination-bullet-active {
-    background-color: #FF5524;
+    background-color: #D91700;
+    width: 1rem;
+    height: 1rem;
+}
+.simplicity .swiper-pagination-bullet-active {
+    background-color: #D91700;
     width: 1rem;
     height: 1rem;
 }
