@@ -24,156 +24,7 @@ function initializeTabs() {
 // Inicializa os event listeners quando o documento estiver carregado
 document.addEventListener('DOMContentLoaded', initializeTabs);
 
-var swiper = new Swiper(".preventFocus", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
-
-var swiper = new Swiper(".cqEnabling", {
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    loop: true,
-});
-
-var swiper = new Swiper(".swiperBrasil", {
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    loop: true,
-});
-var swiper = new Swiper(".swiperRegional", {
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    loop: true,
-});
-
-
-var swiper = new Swiper(".customerFocus", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-var swiper = new Swiper(".simplicity", {
-    slidesPerView: "auto",
-    // centeredSlides: true,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
-    thumbs: {
-        swiper: swiper,
-    },
-});
-
-
-var swiper = new Swiper(".brasilFeira2", {
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".brasilFeira", {
-    spaceBetween: 10,
-    thumbs: {
-        swiper: swiper,
-    },
-});
-
-
-var swiper = new Swiper(".regionalFeira2", {
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".regionalFeira", {
-    spaceBetween: 10,
-    thumbs: {
-        swiper: swiper,
-    },
-});
-
-var brasilMeeting = new Swiper(".brasilMeeting", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var brasilMeeting2 = new Swiper(".brasilMeeting2", {
-    spaceBetween: 10,
-    thumbs: {
-        swiper: brasilMeeting,
-    },
-});
-
-var regionalMeeting = new Swiper(".regionalMeeting", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var regionalMeeting2 = new Swiper(".regionalMeeting2", {
-    spaceBetween: 10,
-    thumbs: {
-        swiper: regionalMeeting,
-    },
-});
 function toggleTab(activeTabId, inactiveTabId, activeContentId, inactiveContentId, activeTabsId, inactiveTabsId) {
     document.getElementById(activeContentId).classList.remove('hidden');
     document.getElementById(inactiveContentId).classList.add('hidden');
@@ -276,3 +127,87 @@ document.getElementById('brasilTab').addEventListener('click', function () {
 document.getElementById('clusterTab').addEventListener('click', function () {
     customerToggleTab('clusterCntt', 'brasilCntt', 'clusterTab', 'brasilTab');
 });
+
+var swiperQualityMonthData = new Swiper(".qualityMonthData", {
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+
+var swiperQualityMonthFotos = new Swiper(".qualityMonthFotos", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 6,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperQualityMonthFotos2 = new Swiper(".qualityMonthFotos2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiperQualityMonthFotos,
+    },
+});
+
+var swiperCustomerFocusOperation = new Swiper(".customerFocusOperation", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperCustomerFocusOperation2 = new Swiper(".customerFocusOperation2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiperCustomerFocusOperation,
+    },
+});
+
+var swiperProjectAnemoRegional = new Swiper(".projectAnemoRegional", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiperMexico = new Swiper(".mexico", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperMexico2 = new Swiper(".mexico2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperMexico,
+    },
+});
+
+var swiperSejaVoce = new Swiper(".sejaVoce", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperSejaVoce2 = new Swiper(".sejaVoce2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperSejaVoce,
+    },
+});
+var swiperAtividadesHealth = new Swiper(".atividadesHealth", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
