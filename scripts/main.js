@@ -207,7 +207,86 @@ var swiperSejaVoce2 = new Swiper(".sejaVoce2", {
 });
 var swiperAtividadesHealth = new Swiper(".atividadesHealth", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiperClusterSul = new Swiper(".clusterSul", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperClusterSul2 = new Swiper(".clusterSul2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperClusterSul,
+    },
+});
+
+// Inicialização para o slider México e Brasil
+var swiperMexicoBrasil = new Swiper(".mexicoBrasil", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiperMexicoBrasil2 = new Swiper(".mexicoBrasil2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperMexicoBrasil,
+    },
+});
+
+// Inicialização para o slider Cluster Norte
+var swiperClusterNorte = new Swiper(".clusterNorte", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiperClusterNorte2 = new Swiper(".clusterNorte2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperClusterNorte,
+    },
+});
+
+// Inicialização para o slider Argentina
+var swiperArgentina = new Swiper(".argentina", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiperArgentina2 = new Swiper(".argentina2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperArgentina,
+    },
+});
+
+// Inicialização para o slider Chile
+var swiperChile = new Swiper(".chile", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiperChile2 = new Swiper(".chile2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperChile,
+    },
+});
+
+var swiperSaibaMais = new Swiper(".saibaMais", {
+    pagination: {
+      el: ".swiper-pagination",
     },
   });
