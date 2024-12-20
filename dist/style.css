@@ -110,7 +110,10 @@
     font-style: italic;
 }
 
-
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
 h1,
 h2,
 h3,
@@ -134,6 +137,7 @@ span {
     font-weight: 500;
 }
 
+/* Swiper Slides */
 .brasilMeeting .swiper-slide,
 .regionalMeeting .swiper-slide {
     width: 25%;
@@ -146,6 +150,29 @@ span {
     opacity: 1;
 }
 
+/* Swiper Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 0.5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '' !important;
+}
+
+.swiper-button-next span,
+.swiper-button-prev span {
+    background-color: #D91700;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+/* Button Colors */
 .swiperBrasil .swiper-button-next,
 .swiperBrasil .swiper-button-prev {
     background-color: #0F68B2;
@@ -159,95 +186,32 @@ span {
 .customerFocus .swiper-button-next,
 .customerFocus .swiper-button-prev,
 .simplicity .swiper-button-next,
-.simplicity .swiper-button-prev {
-    background-color: #D91700;
-}
-
+.simplicity .swiper-button-prev,
 .preventFocus .swiper-button-next,
 .preventFocus .swiper-button-prev {
     background-color: #D91700;
-    top: 90%;
 }
 
+/* Prevent Focus Adjustments */
 .preventFocus .swiper-button-next {
+    top: 90%;
     left: 55%;
 }
 
 .preventFocus .swiper-button-prev {
+    top: 90%;
     left: 40%;
 }
 
-
-.cqEnabling .swiper-button-next,
-.cqEnabling .swiper-button-prev,
-.swiperBrasil .swiper-button-next,
-.swiperBrasil .swiper-button-prev,
-.preventFocus .swiper-button-prev,
-.preventFocus .swiper-button-next,
-.customerFocus .swiper-button-next,
-.customerFocus .swiper-button-prev,
-.simplicity .swiper-button-next,
-.simplicity .swiper-button-prev {
-    padding: 1.5rem;
-    border-radius: 50%;
-    color: #ffffff;
-    font-size: .5rem;
+/* Bullet Styles */
+.swiper-pagination-bullet-active {
+    background-color: #D91700!important;
+    width: .8rem!important;
+    height: .8rem!important;
 }
 
-.cqEnabling .swiper-button-next::after,
-.cqEnabling .swiper-button-prev::after,
-.swiperBrasil .swiper-button-next::after,
-.swiperBrasil .swiper-button-prev::after,
-.preventFocus .swiper-button-prev::after,
-.preventFocus .swiper-button-next::after,
-.customerFocus .swiper-button-next::after,
-.customerFocus .swiper-button-prev::after,
-.simplicity .swiper-button-next::after,
-.simplicity .swiper-button-prev::after {
-    font-size: 1.5rem;
-}
 
-.cqEnabling .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: 1rem;
-    height: 1rem;
-}
-
-.swiperBrasil .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: 1rem;
-    height: 1rem;
-}
-
-.customerFocus .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: 1rem;
-    height: 1rem;
-}
-
-.simplicity .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: 1rem;
-    height: 1rem;
-}
-
-.preventFocus .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: 1rem;
-    height: 1rem;
-}
-
-.qualityMonthData .swiper-pagination-bullet-active {
-    background-color: #D91700;
-    width: .8rem;
-    height: .8rem;
-}
-
-.projectAnemoRegional .swiper-button-next,
-.projectAnemoRegional .swiper-button-prev {
-    color: #D91700;
-}
-
+/* Explorer and Local Project */
 .explorer .swiper-slide-thumb-active,
 .localProject .swiper-slide-thumb-active {
     background-color: #D91700;
@@ -255,15 +219,8 @@ span {
     border: #D91700;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    content: '' !important;
-}
-
-.swiper-button-next span,
-.swiper-button-prev span {
-    background-color: #D91700;
-    color: #ffffff;
-    border-radius: 50%;
-    padding: .2rem;
+/* Project Anemo Regional */
+.projectAnemoRegional .swiper-button-next,
+.projectAnemoRegional .swiper-button-prev {
+    color: #D91700;
 }
