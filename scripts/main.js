@@ -121,21 +121,27 @@ function customerToggleTab(activeContentId, inactiveContentId, activeTabId, inac
     inactiveTab.classList.add('bg-white', 'text-red-500', 'border-2', 'border-red-500');
 }
 
-document.getElementById('brasilTab').addEventListener('click', function () {
-    customerToggleTab('brasilCntt', 'clusterCntt', 'brasilTab', 'clusterTab');
-});
-document.getElementById('clusterTab').addEventListener('click', function () {
-    customerToggleTab('clusterCntt', 'brasilCntt', 'clusterTab', 'brasilTab');
-});
+// document.getElementById('brasilTab').addEventListener('click', function () {
+//     customerToggleTab('brasilCntt', 'clusterCntt', 'brasilTab', 'clusterTab');
+// });
+// document.getElementById('clusterTab').addEventListener('click', function () {
+//     customerToggleTab('clusterCntt', 'brasilCntt', 'clusterTab', 'brasilTab');
+// });
 
 var swiperQualityMonthData = new Swiper(".qualityMonthData", {
+     autoHeight: true,
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
     },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
 
 var swiperQualityMonthFotos = new Swiper(".qualityMonthFotos", {
+     autoHeight: true,
     loop: true,
     spaceBetween: 10,
     slidesPerView: 6,
@@ -143,18 +149,16 @@ var swiperQualityMonthFotos = new Swiper(".qualityMonthFotos", {
     watchSlidesProgress: true,
 });
 var swiperQualityMonthFotos2 = new Swiper(".qualityMonthFotos2", {
+     autoHeight: true,
     loop: true,
     spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
     thumbs: {
         swiper: swiperQualityMonthFotos,
     },
 });
 
 var swiperCustomerFocusOperation = new Swiper(".customerFocusOperation", {
+     autoHeight: true,
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
@@ -162,6 +166,7 @@ var swiperCustomerFocusOperation = new Swiper(".customerFocusOperation", {
     watchSlidesProgress: true,
 });
 var swiperCustomerFocusOperation2 = new Swiper(".customerFocusOperation2", {
+     autoHeight: true,
     loop: true,
     spaceBetween: 10,
     navigation: {
@@ -174,19 +179,26 @@ var swiperCustomerFocusOperation2 = new Swiper(".customerFocusOperation2", {
 });
 
 var swiperProjectAnemoRegional = new Swiper(".projectAnemoRegional", {
+     autoHeight: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
 });
 
 var swiperMexico = new Swiper(".mexico", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var swiperMexico2 = new Swiper(".mexico2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperMexico,
@@ -194,31 +206,51 @@ var swiperMexico2 = new Swiper(".mexico2", {
 });
 
 var swiperSejaVoce = new Swiper(".sejaVoce", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var swiperSejaVoce2 = new Swiper(".sejaVoce2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperSejaVoce,
     },
 });
 var swiperAtividadesHealth = new Swiper(".atividadesHealth", {
+     autoHeight: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+var swiperAtividadesHealth2 = new Swiper(".atividadesHealth2", {
+     autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
 });
 
 var swiperClusterSul = new Swiper(".clusterSul", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var swiperClusterSul2 = new Swiper(".clusterSul2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperClusterSul,
@@ -227,6 +259,7 @@ var swiperClusterSul2 = new Swiper(".clusterSul2", {
 
 // Inicialização para o slider México e Brasil
 var swiperMexicoBrasil = new Swiper(".mexicoBrasil", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
@@ -234,6 +267,7 @@ var swiperMexicoBrasil = new Swiper(".mexicoBrasil", {
 });
 
 var swiperMexicoBrasil2 = new Swiper(".mexicoBrasil2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperMexicoBrasil,
@@ -242,6 +276,7 @@ var swiperMexicoBrasil2 = new Swiper(".mexicoBrasil2", {
 
 // Inicialização para o slider Cluster Norte
 var swiperClusterNorte = new Swiper(".clusterNorte", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
@@ -249,6 +284,7 @@ var swiperClusterNorte = new Swiper(".clusterNorte", {
 });
 
 var swiperClusterNorte2 = new Swiper(".clusterNorte2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperClusterNorte,
@@ -257,6 +293,7 @@ var swiperClusterNorte2 = new Swiper(".clusterNorte2", {
 
 // Inicialização para o slider Argentina
 var swiperArgentina = new Swiper(".argentina", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
@@ -264,6 +301,7 @@ var swiperArgentina = new Swiper(".argentina", {
 });
 
 var swiperArgentina2 = new Swiper(".argentina2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperArgentina,
@@ -272,6 +310,7 @@ var swiperArgentina2 = new Swiper(".argentina2", {
 
 // Inicialização para o slider Chile
 var swiperChile = new Swiper(".chile", {
+     autoHeight: true,
     spaceBetween: 10,
     slidesPerView: 5,
     freeMode: true,
@@ -279,6 +318,7 @@ var swiperChile = new Swiper(".chile", {
 });
 
 var swiperChile2 = new Swiper(".chile2", {
+     autoHeight: true,
     spaceBetween: 10,
     thumbs: {
         swiper: swiperChile,
@@ -286,7 +326,117 @@ var swiperChile2 = new Swiper(".chile2", {
 });
 
 var swiperSaibaMais = new Swiper(".saibaMais", {
+     autoHeight: true,
     pagination: {
-      el: ".swiper-pagination",
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+var swiperModuloEtq = new Swiper(".moduloEtq", {
+     autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+var swiperIPrevent = new Swiper(".iPrevent", {
+     autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+var swiperRodrigo = new Swiper(".rodrigo", {
+     autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+var swiperCxAcademy = new Swiper(".cxAcademy", {
+     autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+
+var swiperExplorer = new Swiper(".explorer", {
+     autoHeight: true,
+    spaceBetween: 1,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiperExplorer2 = new Swiper(".explorer2", {
+    spaceBetween: 10,
+    autoHeight: true,
+    thumbs: {
+      swiper: swiperExplorer,
     },
   });
+var swiperLocalProject = new Swiper(".localProject", {
+     autoHeight: true,
+    spaceBetween: 1,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiperLocalProject2 = new Swiper(".localProject2", {
+    spaceBetween: 10,
+    autoHeight: true,
+    thumbs: {
+      swiper: swiperLocalProject,
+    },
+  });
+
+function configurePopup(openButtonId, closeButtonId, popupId) {
+    const openButton = document.getElementById(openButtonId);
+    const closeButton = document.getElementById(closeButtonId);
+    const popup = document.getElementById(popupId);
+
+    if (openButton && closeButton && popup) {
+
+        openButton.addEventListener("click", () => {
+            popup.classList.remove("hidden");
+            popup.classList.add("flex");
+        });
+
+        closeButton.addEventListener("click", () => {
+            popup.classList.add("hidden");
+            popup.classList.remove("flex");
+        });
+
+        popup.addEventListener("click", (event) => {
+            if (event.target === popup) {
+                popup.classList.add("hidden");
+                popup.classList.remove("flex");
+            }
+        });
+    }
+}
+
+configurePopup("openPopupModulo", "closePopupModulo", "popupModulo");
+configurePopup("openElementosPrincipais", "closeElementosPrincipais", "popupElementosPrincipais");
+configurePopup("openFluxoDar", "closeFluxoDar", "popupFluxoDar");
+configurePopup("openFluxograma", "closeFluxograma", "popupFluxograma");
+configurePopup("openHighlights", "closeHighlights", "popupHighlights");
+configurePopup("openResultados", "closeResultados", "popupResultados");
+configurePopup("openResultadosSacolas", "closeResultadosSacolas", "popupResultadosSacolas");
+configurePopup("openHighlightsSacolas", "closeHighlightsSacolas", "popupHighlightsSacolas");
